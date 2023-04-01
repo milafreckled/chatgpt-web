@@ -46,6 +46,11 @@ export default defineConfig((env) => {
       },
     },
     build: {
+      rollupOptions: {
+        external: [
+          /^node:.*/,
+        ],
+      },
       reportCompressedSize: false,
       sourcemap: false,
       commonjsOptions: {
